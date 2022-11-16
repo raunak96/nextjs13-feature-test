@@ -1,27 +1,12 @@
-# Next.js + Tailwind CSS Example
+# Next.js 13 Changes
+## Routing and Page Structure
+- All Pages now come under app directory.![Route Structure](https://assets.vercel.com/image/upload/f_auto,q_100,w_1600/v1667553431/nextjs-docs/darkmode/route-segments-to-path-segments.png).
+- Index Route under a folder is now called `page.tsx`. ![Page Structure](https://assets.vercel.com/image/upload/f_auto,q_100,w_1600/v1666568301/nextjs-docs/darkmode/defining-routes-page.js.png)
+- Anything inside app directory is by default `server component`. Only if our component requires some event handling, state management/lifecycle methods, hooks or browser APIs we use client component by explicitly specifying it as so.
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.2)](https://tailwindcss.com/blog/tailwindcss-v3-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
-
-## Deploy your own
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+- There are some reserved components for each route inside app.
+  1. layout - UI shared b/w all routes inside this route.
+  2. head - allows to configure head tag(meta and title).
+  3. page - page(UI) of that Route.
+  4. loading - A loading file can create instant loading states built on React Suspense.
+  5. error - An error file defines an error boundary for a route segment.
