@@ -10,3 +10,11 @@
   3. page - page(UI) of that Route.
   4. loading - A loading file can create instant loading states built on React Suspense.
   5. error - An error file defines an error boundary for a route segment.
+
+## Static (with ISR) and Dynamic Rendering
+- `getServerSideProps` and `getStaticProps` are now removed. We directly call the API in component itself and then specify in cache property of fetch API if rendering is static or dynamic. `force-cache` is static(default)  and `no-store` is dynamic. 
+  - If we want use non-fetch library or ODM etc, we can specify rendering behavior
+  ```javascript
+  export const dynamic = 'auto'
+    // 'auto' | 'force-dynamic' | 'error' | 'force-static'
+  ```
