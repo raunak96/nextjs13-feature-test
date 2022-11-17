@@ -25,13 +25,13 @@ const fetchTodos = async () => {
 const TodosList = async () => {
 	const todos = await fetchTodos();
 	return (
-		<>
+		<div>
 			{todos.map((todo: Todo) => (
 				<p key={todo.id}>
 					<Link href={`/todos/${todo.id}`}>Todo: {todo.id}</Link>
 				</p>
 			))}
-		</>
+		</div>
 	);
 };
 export default TodosList;
