@@ -7,8 +7,10 @@ export default function TodosLayout({
 }) {
 	return (
 		<main className="flex gap-2 m-4">
-			{/* @ts-expect-error Server Component */}
-			<TodosList />
+			<div>
+				{/* @ts-expect-error Server Component */}
+				<TodosList />
+			</div>
 			<div className="flex-1">{children}</div>
 		</main>
 	);

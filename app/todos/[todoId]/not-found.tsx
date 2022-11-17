@@ -12,7 +12,7 @@ const Notfound = () => {
 			<button
 				className="p-4 bg-white text-black"
 				onClick={() => router.back()}>
-				Back to Home
+				Back
 			</button>
 		</div>
 	);
