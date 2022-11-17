@@ -18,3 +18,12 @@
   export const dynamic = 'auto'
     // 'auto' | 'force-dynamic' | 'error' | 'force-static'
   ```
+
+## Dynamic Route(Pages)
+- Create folder with the following convention - `[slug].tsx`.
+- `getStaticPaths` is replaced with `generateStaticParams` which returns possible paths in the following format:
+  [{slug:"1"},{slug:"2"},...].
+- Instead of fallback, we use following :
+ ```javascript
+    export const dynamicParams = true; //or false
+ ```
